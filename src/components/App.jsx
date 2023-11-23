@@ -1,23 +1,23 @@
-import style from './App.module.css';
-import Header from './Header';
-import { MoviesPage } from 'pages';
+import { ErrorPage, MoviesPage } from 'pages';
 import { HomePage } from 'pages';
 import { Route, Routes } from 'react-router-dom';
-import {MovieDetails} from 'pages';
+import { MovieDetailsPage } from 'pages';
+import AppLayout from './AppLayout/AppLayout';
 
-const App = (props) => {
-
+const App = props => {
   return (
-    <div className={style.app}>
-      <Header />
-
+    <>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/movies" element={<MoviesPage />} />
-        <Route path="/movies/:movieId" element={<MovieDetails />} />
-        <Route path='*' element={<HomePage />} />
+        <Route path="/" element={<AppLayout />}>
+          <Route index element={<HomePage />} />
+          <Route path="movies" element={<MoviesPage />} />
+          <Route path="movies/:movieId" element={<MovieDetailsPage />} />
+          <Route path="movies/:movieId/cast" element={<div>Cast</div>} />
+          <Route path="movies/:movieId/reviews" element={<div>Reviews</div>} />
+          <Route path="*" element={<ErrorPage />} />
+        </Route>
       </Routes>
-    </div>
+    </>
   );
 };
 

@@ -1,0 +1,18 @@
+.form {
+    margin-top: 40px;
+    margin-left: 30px;
+  }
+  .input {
+    width: 350px;
+    height: 20px;
+  }
+  .input:hover,
+  .input:focus {
+    outline: none;
+    border: 2px solid #e44888;
+  }
+  
+  .button {
+    height: 26px;
+  }
+  

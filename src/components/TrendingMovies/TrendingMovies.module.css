@@ -1,0 +1,7 @@
+.nav_link{
+    color: darkcyan;
+    text-decoration: none;
+}
+.nav_link:hover{
+    text-decoration: underline;
+}

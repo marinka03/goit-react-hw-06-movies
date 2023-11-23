@@ -26,8 +26,7 @@ function HomePage() {
     f();
     // eslint-disable-next-line
   }, []);
-
-  // console.log(films)
+  console.log(errorMessage)
 
   return (
     <>

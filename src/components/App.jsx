@@ -3,6 +3,8 @@ import { HomePage } from 'pages';
 import { Route, Routes } from 'react-router-dom';
 import { MovieDetailsPage } from 'pages';
 import AppLayout from './AppLayout/AppLayout';
+import Cast from './Cast/Cast';
+import Reviews from './Reviews/Reviews';
 
 const App = props => {
   return (
@@ -11,9 +13,14 @@ const App = props => {
         <Route path="/" element={<AppLayout />}>
           <Route index element={<HomePage />} />
           <Route path="movies" element={<MoviesPage />} />
-          <Route path="movies/:movieId" element={<MovieDetailsPage />} />
-          <Route path="movies/:movieId/cast" element={<div>Cast</div>} />
-          <Route path="movies/:movieId/reviews" element={<div>Reviews</div>} />
+          <Route path="movies/:movieId" element={<MovieDetailsPage />}>
+            <Route path="cast" element={<Cast/>} />
+            <Route
+              path="reviews"
+              element={<Reviews/>}
+            />
+          </Route>
+
           <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>

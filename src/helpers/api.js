@@ -22,3 +22,10 @@ export const getSearchMovie = async movie => {
   );
   return await response.json();
 };
+export const getCast = async movieId => {
+  const response = await fetch(
+    `https://api.themoviedb.org/3/movie/${movieId}/credits?language=en-US&api_key=20743075650ced62d8357927907f018d`,
+    option
+  );
+  return await response.json();
+};

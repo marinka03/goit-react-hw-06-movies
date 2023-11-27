@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, Outlet, useParams } from 'react-router-dom';
 
 import ErrorPage from './ErrorPage';
 import Loader from 'components/Loader';
@@ -107,6 +107,19 @@ function MovieDetails() {
           </div>
         </>
       )}
+      <section>
+        <p>Additional information:</p>
+        <ul>
+          <li>
+            <Link to="cast">Cast</Link>
+          </li>
+          <li>
+            <Link to="reviews">Reviews</Link>
+          </li>
+        </ul>
+      </section>
+
+      <Outlet />
     </div>
   );
 }

@@ -29,3 +29,10 @@ export const getCast = async movieId => {
   );
   return await response.json();
 };
+export const getReviews = async movieId => {
+  const response = await fetch(
+    `https://api.themoviedb.org/3/movie/${movieId}/reviews?language=en-US&api_key=20743075650ced62d8357927907f018d`,
+    option
+  );
+  return await response.json();
+};

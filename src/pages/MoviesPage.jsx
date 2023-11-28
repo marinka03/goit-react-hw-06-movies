@@ -17,7 +17,6 @@ function MoviesPage() {
       setFetching(true);
       const { results } = await getSearchMovie(searchValue);
       setResultFilms(results);
-      console.log('FILMINFO', results);
     } catch (error) {
       setErrorMessage('Error. not found searching film');
     } finally {
@@ -28,8 +27,6 @@ function MoviesPage() {
   const heandleSearchValue = e => {
     e.preventDefault();
     setSearchValue(e.target.value);
-    console.log(e.target.value);
-    console.dir(e.target.name);
   };
 
   return (

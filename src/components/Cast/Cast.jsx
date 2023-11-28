@@ -1,42 +1,59 @@
 import { getCast } from 'helpers/api';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import style from './Cast.module.css';
 
 function Cast() {
   const [isLoading, setIsLoading] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
   const [castArr, setCastArr] = useState(null);
 
   const { movieId } = useParams();
   useEffect(() => {
+    if(castArr){
+      return
+    }
     const f = async () => {
       try {
-        // console.log("Params",params.movieId)
         setIsLoading('LOADING...');
         const { cast } = await getCast(movieId);
-        console.log('DATA FROM CAST', cast);
+          if(!cast || cast.length === 0){
+            setErrorMessage('We don`t have any cast for this movie');
+          }
         setCastArr(cast);
       } catch (error) {
-        console.log(error);
+        setErrorMessage('Something went wrong!');
       } finally {
         setIsLoading('');
       }
     };
     f();
-  }, [movieId]);
+  }, [movieId, castArr]);
   const getImgActor = url => {
     return url
-      ? 'https://image.tmdb.org/t/p/w200' + url
-      : 'https://fakeimg.pl/200x300?text=no+actor';
+      ? 'https://image.tmdb.org/t/p/w300' + url
+      : 'https://fakeimg.pl/300x450?text=no+photo';
   };
   return (
     <>
       {isLoading && <p>{isLoading}</p>}
-      <ul>
+      {errorMessage && <p><b>{errorMessage}</b></p>}
+      <ul className={style.list}>
         {castArr?.map(({ id, name, profile_path, character }) => (
-          <li key={id}>
-            <img src={getImgActor(profile_path)} alt={name} />
-            <p>{name}</p>
-            <p>Character:{character}</p>
+          <li key={id} className={style['actor-card']}>
+            <div className={style['card-content']}>
+              <div className={style['img-wrapper']}>
+                <img
+                  className={style.img}
+                  src={getImgActor(profile_path)}
+                  alt={name}
+                />
+              </div>
+              <p>
+                <b>{name}</b>
+              </p>
+              <p>Character: {character}</p>
+            </div>
           </li>
         ))}
       </ul>

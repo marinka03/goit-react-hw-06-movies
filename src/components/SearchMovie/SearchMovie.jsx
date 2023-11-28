@@ -1,17 +1,25 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
+ const StyledLink = styled(Link)`
+  color: darkcyan;
+  text-decoration: none;
+  &:hover{
+    text-decoration: underline;
+  }
+ `
+ 
 function SearchMovie({ resultFilms }) {
-  console.log(resultFilms);
   return (
     <div>
       <ul>
         {resultFilms?.map(film => (
           <li key={film.id}>
-            <NavLink to={`/movies/${film.id}`}>
+            <StyledLink to={`/movies/${film.id}`} >
               {film.title}
               {`(${film.release_date})`}
-            </NavLink>
+            </StyledLink>
           </li>
         ))}
       </ul>

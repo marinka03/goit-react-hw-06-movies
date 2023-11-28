@@ -5,6 +5,7 @@ import { MovieDetailsPage } from 'pages';
 import AppLayout from './AppLayout/AppLayout';
 import Cast from './Cast/Cast';
 import Reviews from './Reviews/Reviews';
+import GlobalStyles from './GlobalStyles';
 
 const App = props => {
   return (
@@ -24,6 +25,7 @@ const App = props => {
           <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>
+      <GlobalStyles/>
     </>
   );
 };

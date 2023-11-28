@@ -1,11 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import { Link, Outlet, useParams } from 'react-router-dom';
+import { NavLink, Outlet, useParams } from 'react-router-dom';
 
 import ErrorPage from './ErrorPage';
 import Loader from 'components/Loader';
 
 import { getMovieDetails } from 'helpers/api';
 import style from './MovieDetailsPage.module.css';
+import styled from 'styled-components';
+
+const StyledNavLink = styled(NavLink)`
+  text-decoration: none;
+  color: #1c2731;
+  font-weight: bold;
+  &.active{
+    color: #356d9e
+  }
+`
 
 let detailsValues = {
   title: '',
@@ -71,7 +81,7 @@ function MovieDetails() {
       ) : (
         <>
           <button className={style.back_btn}>Go back</button>
-          <div className={style.movie_details}>
+          <section className={style.movie_details}>
             <img
               src={getPoster(valuesDatails.url)}
               alt={valuesDatails.title || valuesDatails.name}
@@ -104,17 +114,17 @@ function MovieDetails() {
                 ))}
               </ul>
             </div>
-          </div>
+          </section>
         </>
       )}
-      <section>
+      <section className={style['additional-section']}>
         <p>Additional information:</p>
         <ul>
           <li>
-            <Link to="cast">Cast</Link>
+            <StyledNavLink to="cast">Cast</StyledNavLink>
           </li>
           <li>
-            <Link to="reviews">Reviews</Link>
+            <StyledNavLink to="reviews">Reviews</StyledNavLink>
           </li>
         </ul>
       </section>

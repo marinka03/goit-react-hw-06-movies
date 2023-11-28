@@ -1,6 +1,15 @@
 import React from 'react';
 import style from './TrendingMovies.module.css';
-import { NavLink } from 'react-router-dom';
+import { Link} from 'react-router-dom';
+import styled from 'styled-components';
+
+const StyledLink = styled(Link)`
+color: darkcyan;
+text-decoration: none;
+&:hover{
+  text-decoration: underline;
+}
+`
 
 function TrendingMovies({ films = [] }) {
   return (
@@ -10,9 +19,9 @@ function TrendingMovies({ films = [] }) {
           const movieId = film.id;
           return (
             <li key={movieId}>
-              <NavLink to={`/movies/${movieId}`} className={style.nav_link}>
+              <StyledLink to={`/movies/${movieId}`} className={style.nav_link}>
                 {film.title || film.name}
-              </NavLink>
+              </StyledLink>
             </li>
           );
         })}

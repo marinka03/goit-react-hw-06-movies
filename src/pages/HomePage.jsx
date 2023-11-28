@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './HomePage.module.css';
+// import style from './HomePage.module.css';
 import { useEffect, useState } from 'react';
 import { getTrendingMovie } from 'helpers/api';
 import TrendingMovies from 'components/TrendingMovies';
@@ -19,8 +19,6 @@ function HomePage() {
       try {
         const { results } = await getTrendingMovie();
         setFilms(results);
-        console.log('FILMS', films);
-        console.log('RESULT', results);
       } catch (error) {
         setErrorMessage('oops, something happened');
       } finally {
@@ -30,14 +28,12 @@ function HomePage() {
     f();
   }, [films]);
 
-  // eslint-disable-next-line
-
-  console.log('error:', errorMessage);
   return (
     <>
       {isFetching && <Loader />}
       {errorMessage && <ErrorPage errorMessage={errorMessage} />}
-      <div className={style.wrapper}>
+
+      <div>
         <h1>Trending today</h1>
         <TrendingMovies films={films} />
       </div>

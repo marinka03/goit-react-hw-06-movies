@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink, Outlet, useParams } from 'react-router-dom';
+import { IoArrowUndoOutline } from "react-icons/io5";
 
 import ErrorPage from './ErrorPage';
 import Loader from 'components/Loader';
@@ -80,7 +81,9 @@ function MovieDetails() {
         <ErrorPage errorMessage={errorMessage} />
       ) : (
         <>
-          <button className={style.back_btn}>Go back</button>
+          <button className={style.back_btn}>
+            <IoArrowUndoOutline/>
+            Go back</button>
           <section className={style.movie_details}>
             <img
               src={getPoster(valuesDatails.url)}

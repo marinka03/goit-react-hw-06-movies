@@ -7,6 +7,11 @@
   width: 100px;
   height: 30px;
   margin-bottom: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
 }
 .movie_img {
   min-width: 300px;

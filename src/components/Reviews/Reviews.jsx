@@ -61,7 +61,7 @@ function Reviews() {
                     />
                   </div>
                   <p>
-                    <b>{username}</b>
+                    Author: <b>{username}</b>
                   </p>
                 </div>
                 <p>{content}</p>

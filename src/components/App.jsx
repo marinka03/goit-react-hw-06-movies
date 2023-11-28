@@ -7,7 +7,7 @@ import Cast from './Cast/Cast';
 import Reviews from './Reviews/Reviews';
 import GlobalStyles from './GlobalStyles';
 
-const App = props => {
+const App = () => {
   return (
     <>
       <Routes>

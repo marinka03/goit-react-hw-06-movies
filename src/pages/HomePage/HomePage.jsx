@@ -1,10 +1,9 @@
 import React from 'react';
-// import style from './HomePage.module.css';
 import { useEffect, useState } from 'react';
 import { getTrendingMovie } from 'helpers/api';
 import TrendingMovies from 'components/TrendingMovies';
 import Loader from 'components/Loader';
-import ErrorPage from './ErrorPage';
+import ErrorPage from '../ErrorPage/ErrorPage';
 
 function HomePage() {
   const [films, setFilms] = useState(null);

@@ -1,6 +1,6 @@
 import React from 'react';
 import { MdDoubleArrow } from 'react-icons/md';
-import calmImg from '../images/calm-man.jpg';
+import calmImg from '../../images/calm-man.jpg';
 import style from './ErrorPage.module.css';
 import { Link } from 'react-router-dom';
 

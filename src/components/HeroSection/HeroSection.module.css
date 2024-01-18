@@ -1,0 +1,18 @@
+.hero{
+background-image: url('/public/hero-background.png');
+background-size: contain;
+background-repeat: no-repeat;
+height: 930px;
+}
+.content{
+position: relative;
+z-index: 3;
+left: 50px;
+width: 50%;
+text-align: left;
+font-family: Ubuntu;
+font-size: 40px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+}

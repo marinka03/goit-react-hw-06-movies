@@ -1,5 +1,5 @@
 import 'modern-normalize';
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
 body {
@@ -9,6 +9,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #282828;
+  background-image: url('/public/body-background.png');
+
+
+  color: #fff;
 }
 ul {
   margin: 0;
@@ -21,5 +26,5 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-`
+`;
 export default GlobalStyles;

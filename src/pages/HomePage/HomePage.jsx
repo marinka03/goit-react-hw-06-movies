@@ -4,6 +4,7 @@ import { getTrendingMovie } from 'helpers/api';
 import TrendingMovies from 'components/TrendingMovies';
 import Loader from 'components/Loader';
 import ErrorPage from '../ErrorPage/ErrorPage';
+import HeroSection from 'components/HeroSection';
 
 function HomePage() {
   const [films, setFilms] = useState(null);
@@ -31,7 +32,7 @@ function HomePage() {
     <>
       {isFetching && <Loader />}
       {errorMessage && <ErrorPage errorMessage={errorMessage} />}
-
+      <HeroSection/>
       <div>
         <h1>Trending today</h1>
         <TrendingMovies films={films} />

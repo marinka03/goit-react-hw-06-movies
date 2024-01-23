@@ -10,8 +10,21 @@
 .year {
   font-weight: 400;
 }
-.vote_average {
-  margin: 0;
+.rating {
+  display: flex;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.vote-circle {
+  border: 2px solid #fff;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
 }
 .overview {
   display: flex;

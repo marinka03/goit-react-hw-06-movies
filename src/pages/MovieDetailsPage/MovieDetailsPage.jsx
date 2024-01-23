@@ -18,10 +18,10 @@ import MovieDetails from 'components/MovieDetails';
 
 const StyledNavLink = styled(NavLink)`
   text-decoration: none;
-  color: #1c2731;
+  color: #356d9e;
   font-weight: bold;
   &.active {
-    color: #356d9e;
+    color: #92b7d8;
   }
 `;
 

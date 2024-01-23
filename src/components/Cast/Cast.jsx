@@ -31,8 +31,8 @@ function Cast() {
   }, [movieId, castArr]);
   const getImgActor = url => {
     return url
-      ? 'https://image.tmdb.org/t/p/w300' + url
-      : 'https://fakeimg.pl/300x450?text=no+photo';
+      ? 'https://image.tmdb.org/t/p/w200' + url
+      : 'https://fakeimg.pl/200x300?text=no+photo';
   };
   return (
     <>
@@ -52,7 +52,7 @@ function Cast() {
               <p>
                 <b>{name}</b>
               </p>
-              <p>Character: {character}</p>
+              <p className={style.character}>Character: {character}</p>
             </div>
           </li>
         ))}

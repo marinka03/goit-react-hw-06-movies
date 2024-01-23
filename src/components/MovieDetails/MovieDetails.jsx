@@ -1,5 +1,4 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useRef } from 'react';
 import style from './MovieDetails.module.css';
 
 function MovieDetails({ valuesDatails }) {
@@ -10,6 +9,16 @@ function MovieDetails({ valuesDatails }) {
       ? 'https://image.tmdb.org/t/p/w500' + url
       : 'https://fakeimg.pl/400x600?text=no+poster';
   };
+  const voteRef = useRef('');
+
+  if (voteRef.current?.style && voteAverage <= 3) {
+    voteRef.current.style.background = '#690502';
+  } else if (voteRef.current?.style && voteAverage > 3 && voteAverage < 7) {
+    voteRef.current.style.background = '#d87a00';
+  } else if (voteRef.current?.style && voteAverage >= 7) {
+    voteRef.current.style.background = '#286902';
+  }
+
   return (
     <>
       <img
@@ -24,7 +33,12 @@ function MovieDetails({ valuesDatails }) {
           {title || name}
           <span className={style.year}>({releaseDate})</span>
         </h1>
-        <p className="vote_average">Vote Average: {voteAverage}</p>
+        <div className={style.rating}>
+          <div className={style['vote-circle']} ref={voteRef}>
+            <b>{String(voteAverage).replace('.', '').slice(0, 2)}%</b>
+          </div>
+          <p>User rating</p>
+        </div>
 
         <h2 className={style.overview}>
           Overview
@@ -41,16 +55,16 @@ function MovieDetails({ valuesDatails }) {
     </>
   );
 }
-MovieDetails.propTypes = {
-  valuesDatails: PropTypes.shape({
-    title: PropTypes.string,
-    name: PropTypes.string,
-    overview: PropTypes.string,
-    url: PropTypes.string,
-    genres: PropTypes.array,
-    releaseDate: PropTypes.string,
-    voteAverage: PropTypes.number,
-  }),
-};
+// MovieDetails.propTypes = {
+//   valuesDatails: PropTypes.shape({
+//     title: PropTypes.string,
+//     name: PropTypes.string,
+//     overview: PropTypes.string,
+//     url: PropTypes.string,
+//     genres: PropTypes.array,
+//     releaseDate: PropTypes.string,
+//     voteAverage: PropTypes.string,
+//   }),
+// };
 
 export default MovieDetails;

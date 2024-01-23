@@ -32,7 +32,7 @@ function HomePage() {
     <>
       {isFetching && <Loader />}
       {errorMessage && <ErrorPage errorMessage={errorMessage} />}
-      <HeroSection/>
+      <HeroSection films={films} />
       <div>
         <h1>Trending today</h1>
         <TrendingMovies films={films} />

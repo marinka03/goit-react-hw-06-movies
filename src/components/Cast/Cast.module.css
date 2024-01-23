@@ -1,7 +1,7 @@
 .list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 15px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 30px;
   grid-row-gap: 15px;
   padding: 0;
   margin-top: 35px;
@@ -11,14 +11,14 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-height: 550px;
-  min-width: 300px;
+  max-height: 450px;
+  max-width: 200px;
 }
 
 .actor-card {
   border-radius: 10px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  width: 300px;
+  width: 200px;
 }
 .img-wrapper {
   border-radius: 10px;
@@ -26,4 +26,8 @@
 }
 .img {
   display: block;
+}
+.character{
+  margin-top: 0;
+  font-size: 12px;
 }

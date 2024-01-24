@@ -5,6 +5,7 @@ import TrendingMovies from 'components/TrendingMovies';
 import Loader from 'components/Loader';
 import ErrorPage from '../ErrorPage/ErrorPage';
 import HeroSection from 'components/HeroSection';
+import style from './HomePage.module.css';
 
 function HomePage() {
   const [films, setFilms] = useState(null);
@@ -33,8 +34,8 @@ function HomePage() {
       {isFetching && <Loader />}
       {errorMessage && <ErrorPage errorMessage={errorMessage} />}
       <HeroSection films={films} />
-      <div>
-        <h1>Trending today</h1>
+      <div className={style.wrapper}>
+        <h1 className={style.title}>Trending today</h1>
         <TrendingMovies films={films} />
       </div>
     </>

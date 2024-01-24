@@ -12,11 +12,18 @@ const StyledLink = styled(Link)`
   }
 `;
 
+const getPoster = url => {
+  return url
+    ? 'https://image.tmdb.org/t/p/w220_and_h330_face' + url
+    : 'https://fakeimg.pl/220x330?text=no+poster';
+};
+
 function TrendingMovies({ films = [] }) {
   const location = useLocation();
+  console.log('from trending', films);
   return (
     <>
-      <ul>
+      <ul className={style.list}>
         {films?.map(film => {
           const movieId = film.id;
           return (
@@ -27,6 +34,14 @@ function TrendingMovies({ films = [] }) {
                 state={{ from: location }}
               >
                 {film.title || film.name}
+                <div className={style.poster}>
+                  <img
+                    src={getPoster(film.poster_path)}
+                    alt={film.title}
+                    title={film.title}
+                    className={style.img}
+                  />
+                </div>
               </StyledLink>
             </li>
           );

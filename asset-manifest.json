@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/onAir-movies/static/css/main.d5d07744.css",
-    "main.js": "/onAir-movies/static/js/main.a0d856f4.js",
+    "main.js": "/onAir-movies/static/js/main.2709ad8c.js",
     "static/css/615.7aa68b18.chunk.css": "/onAir-movies/static/css/615.7aa68b18.chunk.css",
     "static/js/615.3796047e.chunk.js": "/onAir-movies/static/js/615.3796047e.chunk.js",
-    "static/css/793.7e7081b1.chunk.css": "/onAir-movies/static/css/793.7e7081b1.chunk.css",
+    "static/css/793.882ad0b6.chunk.css": "/onAir-movies/static/css/793.882ad0b6.chunk.css",
     "static/js/793.7f17d7d5.chunk.js": "/onAir-movies/static/js/793.7f17d7d5.chunk.js",
     "static/css/709.f2d51b61.chunk.css": "/onAir-movies/static/css/709.f2d51b61.chunk.css",
     "static/js/709.78e09259.chunk.js": "/onAir-movies/static/js/709.78e09259.chunk.js",
@@ -16,10 +16,10 @@
     "static/media/calm-man.jpg": "/onAir-movies/static/media/calm-man.10a2252b0f2a196dea6d.jpg",
     "index.html": "/onAir-movies/index.html",
     "main.d5d07744.css.map": "/onAir-movies/static/css/main.d5d07744.css.map",
-    "main.a0d856f4.js.map": "/onAir-movies/static/js/main.a0d856f4.js.map",
+    "main.2709ad8c.js.map": "/onAir-movies/static/js/main.2709ad8c.js.map",
     "615.7aa68b18.chunk.css.map": "/onAir-movies/static/css/615.7aa68b18.chunk.css.map",
     "615.3796047e.chunk.js.map": "/onAir-movies/static/js/615.3796047e.chunk.js.map",
-    "793.7e7081b1.chunk.css.map": "/onAir-movies/static/css/793.7e7081b1.chunk.css.map",
+    "793.882ad0b6.chunk.css.map": "/onAir-movies/static/css/793.882ad0b6.chunk.css.map",
     "793.7f17d7d5.chunk.js.map": "/onAir-movies/static/js/793.7f17d7d5.chunk.js.map",
     "709.f2d51b61.chunk.css.map": "/onAir-movies/static/css/709.f2d51b61.chunk.css.map",
     "709.78e09259.chunk.js.map": "/onAir-movies/static/js/709.78e09259.chunk.js.map",
@@ -31,6 +31,6 @@
   },
   "entrypoints": [
     "static/css/main.d5d07744.css",
-    "static/js/main.a0d856f4.js"
+    "static/js/main.2709ad8c.js"
   ]
 }

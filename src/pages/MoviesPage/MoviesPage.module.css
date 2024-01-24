@@ -1,13 +1,28 @@
 .form {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+  position: relative;
   gap: 30px;
-  margin: 40px 0 40px 30px;
+  height: 450px;
+  margin: 40px 0 40px 0;
+  background: #c94b4b;
+  background: -webkit-linear-gradient(
+    to right,
+    #4b134f,
+    #c94b4b
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #4b134f,
+    #c94b4b
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .input {
-  width: 370px;
-  height: 25px;
+  width: 85%;
+  height: 46px;
+  border-radius: 32px;
+  padding: 0 120px 0 20px;
 }
 .input:hover,
 .input:focus {
@@ -16,9 +31,34 @@
 }
 
 .button {
-  height: 26px;
+  height: 42px;
   background-color: #6fa9db;
-  border-radius: 4px;
+  border-radius: 32px;
   border: none;
   cursor: pointer;
+  position: absolute;
+  top: 204px;
+  right: 8%;
+  bottom: 1px;
+  padding: 4px 25px;
+}
+/* @media (min-width: 425px) {
+  .button {
+
+  }
+} */
+@media (min-width: 768px) {
+  .button {
+    right: 60px;
+  }
+}
+@media (min-width: 1024px) {
+  .button {
+    right: 80px;
+  }
+}
+@media (min-width: 1500px) {
+  .button {
+    right: 108px;
+  }
 }

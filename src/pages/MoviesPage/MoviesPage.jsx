@@ -45,7 +45,7 @@ function MoviesPage() {
             value={searchValue}
             autoComplete="off"
             autoFocus
-            placeholder="Search films"
+            placeholder="Search films..."
           />
           <button className={style.button} onClick={onClick}>
             <span className="button-label">Search</span>

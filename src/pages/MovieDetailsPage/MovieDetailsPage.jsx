@@ -71,36 +71,38 @@ function MovieDetailsPage() {
 
   return (
     <div className={style.wrapper}>
-      {isFetching && <Loader />}
-      {errorMessage ? (
-        <ErrorPage errorMessage={errorMessage} />
-      ) : (
-        <>
-          <Link
-            className={style.back}
-            to={locationRef.current.state?.from ?? '/'}
-          >
-            <IoArrowUndoOutline />
-            Go back
-          </Link>
-          <section className={style.movie_details}>
-            <MovieDetails valuesDatails={valuesDatails} />
-          </section>
-        </>
-      )}
-      <section className={style['additional-section']}>
-        <p>Additional information:</p>
-        <ul>
-          <li>
-            <StyledNavLink to="cast">Cast</StyledNavLink>
-          </li>
-          <li>
-            <StyledNavLink to="reviews">Reviews</StyledNavLink>
-          </li>
-        </ul>
-      </section>
+      <div className="container">
+        {isFetching && <Loader />}
+        {errorMessage ? (
+          <ErrorPage errorMessage={errorMessage} />
+        ) : (
+          <>
+            <Link
+              className={style.back}
+              to={locationRef.current.state?.from ?? '/'}
+            >
+              <IoArrowUndoOutline />
+              Go back
+            </Link>
+            <section className={style.movie_details}>
+              <MovieDetails valuesDatails={valuesDatails} />
+            </section>
+          </>
+        )}
+        <section className={style['additional-section']}>
+          <p>Additional information:</p>
+          <ul>
+            <li>
+              <StyledNavLink to="cast">Cast</StyledNavLink>
+            </li>
+            <li>
+              <StyledNavLink to="reviews">Reviews</StyledNavLink>
+            </li>
+          </ul>
+        </section>
 
-      <Outlet />
+        <Outlet />
+      </div>
     </div>
   );
 }

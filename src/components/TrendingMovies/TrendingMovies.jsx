@@ -33,7 +33,7 @@ function TrendingMovies({ films = [] }) {
                 className={style.nav_link}
                 state={{ from: location }}
               >
-                {film.title || film.name}
+                <p>{film.title || film.name}</p>
                 <div className={style.poster}>
                   <img
                     src={getPoster(film.poster_path)}

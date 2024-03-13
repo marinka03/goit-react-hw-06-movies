@@ -2,6 +2,7 @@
   position: relative;
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
   height: 280px;
 }
 .content {
@@ -34,7 +35,7 @@
 .title {
   font-size: 0.5em;
 }
-@media (min-width: 425px) {
+@media (min-width: 375px) {
   .hero {
     height: 340px;
   }
@@ -45,7 +46,7 @@
 
 @media (min-width: 768px) {
   .hero {
-    height: 500px;
+    height: 320px;
   }
   .title {
     font-size: 1.5em;
@@ -54,9 +55,9 @@
     top: 10%;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
   .hero {
-    height: 700px;
+    height: 600px;
   }
   .title {
     font-size: 2em;

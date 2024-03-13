@@ -35,7 +35,7 @@ function MoviesPage() {
     <>
       {isFetching && <Loader />}
       {errorMessage && <ErrorPage errorMessage={errorMessage} />}
-      <div>
+      <div className='container'>
         <form type="submit" className={style.form}>
           <input
             onChange={e => heandleSearchValue(e.target.value)}

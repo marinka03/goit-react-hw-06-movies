@@ -1,5 +1,6 @@
 import 'modern-normalize';
 import { createGlobalStyle } from 'styled-components';
+import { theme } from 'vars';
 
 const GlobalStyles = createGlobalStyle`
 body {
@@ -26,6 +27,20 @@ img {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.container {
+  width: ${theme.breakpoint.sm};
+  height: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+  @media (min-width: ${theme.breakpoint.md}) {
+      width: ${theme.breakpoint.md};
+      padding: 0 32px;
+  }
+  @media (min-width: ${theme.breakpoint.xl}) {
+      width: ${theme.breakpoint.xl};
+      padding: 0 96px;
+  }
 }
 `;
 export default GlobalStyles;

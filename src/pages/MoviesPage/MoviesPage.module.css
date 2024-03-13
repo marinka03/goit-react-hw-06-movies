@@ -4,19 +4,7 @@
   align-items: center;
   position: relative;
   gap: 30px;
-  height: 450px;
   margin: 40px 0 40px 0;
-  background: #c94b4b;
-  background: -webkit-linear-gradient(
-    to right,
-    #4b134f,
-    #c94b4b
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #4b134f,
-    #c94b4b
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .input {
   width: 85%;
@@ -33,33 +21,24 @@
 
 .button {
   height: 46px;
-  background-color: #6fa9db;
+  background-color: #C0FCF9;
   border-radius: 32px;
   border: none;
   cursor: pointer;
   position: absolute;
-  top: 202px;
-  right: 8%;
-  bottom: 1px;
+  top: 0px;
+  right: 25px;
   padding: 4px 25px;
 }
-/* @media (min-width: 425px) {
-  .button {
 
-  }
-} */
 @media (min-width: 768px) {
   .button {
-    right: 60px;
+    right: 52px;
   }
 }
-@media (min-width: 1024px) {
+
+@media (min-width: 1440px) {
   .button {
-    right: 80px;
-  }
-}
-@media (min-width: 1500px) {
-  .button {
-    right: 108px;
+    right: 94px;
   }
 }

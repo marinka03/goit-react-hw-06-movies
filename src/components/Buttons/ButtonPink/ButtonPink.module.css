@@ -10,7 +10,7 @@
   top: 30%; /* NEED MORE FLEXIBILITY STYLES*/
   z-index: 5;
   font-size: 0.6em;
-  background-color: #e13c52;
+  background-color: #E44888;
   color: #fff;
   cursor: pointer;
   text-align: center;
@@ -22,7 +22,7 @@
     rgba(0, 0, 0, 0.1) 0 3px 5px, rgba(0, 0, 0, 0.1) 0 10px 13px;
 }
 
-@media (min-width: 425px) {
+@media (min-width: 375px) {
   .btn {
     font-size: 0.6em;
     padding: 5px 17px;
@@ -34,9 +34,8 @@
     padding: 10px 34px;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
   .btn {
     font-size: 1.5em;
-    /* padding: 10px 34px; */
   }
 }

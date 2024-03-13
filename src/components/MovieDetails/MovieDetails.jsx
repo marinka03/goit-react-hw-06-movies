@@ -12,11 +12,11 @@ function MovieDetails({ valuesDatails }) {
   const voteRef = useRef('');
 
   if (voteRef.current?.style && voteAverage <= 3) {
-    voteRef.current.style.background = '#690502';
+    voteRef.current.style.background = '#990F47';
   } else if (voteRef.current?.style && voteAverage > 3 && voteAverage < 7) {
-    voteRef.current.style.background = '#d87a00';
+    voteRef.current.style.background = '#A13E28';
   } else if (voteRef.current?.style && voteAverage >= 7) {
-    voteRef.current.style.background = '#286902';
+    voteRef.current.style.background = '#7D852F';
   }
 
   return (
@@ -55,16 +55,5 @@ function MovieDetails({ valuesDatails }) {
     </>
   );
 }
-// MovieDetails.propTypes = {
-//   valuesDatails: PropTypes.shape({
-//     title: PropTypes.string,
-//     name: PropTypes.string,
-//     overview: PropTypes.string,
-//     url: PropTypes.string,
-//     genres: PropTypes.array,
-//     releaseDate: PropTypes.string,
-//     voteAverage: PropTypes.string,
-//   }),
-// };
 
 export default MovieDetails;

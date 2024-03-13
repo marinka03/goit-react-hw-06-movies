@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
+import style from './SearchMovie.module.css'
 
 const StyledLink = styled(Link)`
-  color: darkcyan;
+  color: #5ABAB6;
   text-decoration: none;
   &:hover {
     text-decoration: underline;
@@ -14,7 +15,7 @@ function SearchMovie({ resultFilms }) {
   const location = useLocation();
   return (
     <div>
-      <ul>
+      <ul className={style.list}>
         {resultFilms?.map(film => (
           <li key={film.id}>
             <StyledLink to={`/movies/${film.id}`} state={{ from: location }}>

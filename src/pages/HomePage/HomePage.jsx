@@ -30,7 +30,7 @@ function HomePage() {
   }, [films]);
 
   return (
-    <>
+    <div className='container'>
       {isFetching && <Loader />}
       {errorMessage && <ErrorPage errorMessage={errorMessage} />}
       <HeroSection films={films} />
@@ -38,7 +38,7 @@ function HomePage() {
         <h1 className={style.title}>Trending today</h1>
         <TrendingMovies films={films} />
       </div>
-    </>
+    </div>
   );
 }
 
